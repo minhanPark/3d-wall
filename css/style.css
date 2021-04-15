@@ -10,3 +10,20 @@ body {
 body[data-char="ragirl"] {
   background: #ff7200;
 }
+
+.world {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+}
+.stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
