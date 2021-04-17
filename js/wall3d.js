@@ -2,6 +2,7 @@
   const stageElem = document.querySelector(".stage");
   const houseElem = document.querySelector(".house");
   const barElem = document.querySelector(".progress-bar");
+  const charElem = document.querySelector(".select-character");
   let maxScrollValue = 0;
   let mousePos = { x: 0, y: 0 };
 
@@ -29,6 +30,13 @@
   resizeHandler();
 
   stageElem.addEventListener("click", function (e) {
-    new Character({ xPos: (e.clientX / window.innerWidth) * 100 });
+    new Character({
+      xPos: (e.clientX / window.innerWidth) * 100,
+    });
+  });
+
+  charElem.addEventListener("click", function (e) {
+    const value = e.target.getAttribute("data-char");
+    document.querySelector("body").setAttribute("data-char", value);
   });
 })();
